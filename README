@@ -4,4 +4,5 @@
 ---------------------------------------------------------------------------------------------
 These are my dotfiles. I'll try to be good about updating these. Almost all of these dotfiles 
 are for OSX I seldom use Linux as my desktop anymore these days. :-( I usually comment when I
- make OSX specific config parameters. 
+make OSX specific config parameters. I've also included a fonts directory with the monospaced
+Consolas font, I prefer to program with this font vs. Monaco *shrugs*. I hope you enjoy. 
