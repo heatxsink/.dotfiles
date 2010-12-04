@@ -5,21 +5,6 @@
 (setq linum-format "%6d ")
 (setq linum-format (lambda (line) (propertize (format (let ((w (length (number-to-string (count-lines (point-min) (point-max)))))) (concat "%" (number-to-string w) "d ")) line) 'face 'linum)))
 
-;; TODO LIST
-;(add-to-list 'load-path "~/emacs/lisp/") ;my lisp dir
-;(autoload 'todo-list-mode "todo-list-mode") ;load when needed
- 
-;a simple function that opens the file,
-;and switches to todo-list-mode.
-;(defun open-todo-list ()
-;  (interactive)
-;  (find-file "~/TODO")
-;  (todo-list-mode))
- 
-;then bind to control-f12 so i can call it with one keystroke
-;this works well for me because i also bind calendar to f12
-;(global-set-key [C-f12] 'open-todo-list)
-
 ;; OSX Specific stuff Here
 (tool-bar-mode 0)
 
