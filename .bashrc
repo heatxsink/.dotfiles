@@ -16,3 +16,8 @@ if [ ! "$KRB5CCNAME" ]; then
 else
     PS1="`uname -n`-dce:$UDSVER> "
 fi
+
+# cli Colors
+export CLICOLOR=1
+# use yellow for dir’s
+export LSCOLORS=dxfxcxdxbxegedabagacad

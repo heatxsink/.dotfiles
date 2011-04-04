@@ -18,6 +18,13 @@ then
 fi
 
 #######################################################
-
+# erase duplicates
+export HISTCONTROL=erasedups
+# resize history size
+export HISTSIZE=10000
+# append to bash_history if Terminal.app quits
+shopt -s histappend
+# aliases
+alias ls='ls -al'
 alias flush_cache='dscacheutil -flushcache'
 export EDITOR='emacs'
