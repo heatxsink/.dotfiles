@@ -68,4 +68,6 @@ shopt -s histappend
 # aliases
 alias ls='ls -al'
 alias flush_cache='dscacheutil -flushcache'
-export EDITOR='emacs'
+alias gitlog='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
+alias gitgraph='git log --graph --pretty=format:"%h%x09%an%x09%ad%x09%s"'
+export EDITOR='vim'
