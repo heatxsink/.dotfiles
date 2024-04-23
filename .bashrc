@@ -15,6 +15,7 @@ function parse_git_branch {
 }
 
 #FIRST, set up the session
+
 if [ ! "$KRB5CCNAME" ]; then
     PS1="{\h:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0m\]}***>"
 else

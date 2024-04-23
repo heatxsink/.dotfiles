@@ -1,6 +1,6 @@
 [user]
-	name = Nicholas Granado
+	name = Nick Granado
 	email = ngranado@gmail.com
 [core]
-    editor = emacs
-    excludesfile = /Users/ngranado/.gitignore
+	editor = vim
+	excludesfile = /Users/ngranado/.gitignore
