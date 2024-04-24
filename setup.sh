@@ -29,6 +29,10 @@ warn() {
 	printf "%s[*] %s%s\n" "$(tput setaf 3)" "$1" "$reset_color"
 }
 
+cleanup() {
+	info "cleaning up."
+}
+
 info "~~~ .dotfiles ~~~"
 wait_input
 
@@ -88,18 +92,8 @@ main() {
 	esac
 
 	success "done."
-
-	info "system needs to restart. restart?"
-
-	select yn in "y" "n"; do
-		case $yn in
-		y)
-			sudo shutdown -r now
-			break
-			;;
-		n) exit ;;
-		esac
-	done
+	
+	success "kthxbai!"
 }
 
 trap cleanup SIGINT SIGTERM ERR EXIT
