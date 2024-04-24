@@ -24,7 +24,7 @@ simulate `stow` links
 stow -nSv vim
 ```
 
-## install
+## setup
 
 Run the `setup.sh` script:
 ```sh
