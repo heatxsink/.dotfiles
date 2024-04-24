@@ -103,6 +103,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# bash functions
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -133,4 +138,3 @@ if [ ! "$KRB5CCNAME" ]; then
 else
     PS1="`uname -n`-dce:$UDSVER> "
 fi
-

@@ -13,9 +13,8 @@ These are my dotfiles. There are many others like them, but these are mine.
 ## requirements
 
 1. git
-1. gnu stow
+1. stow
 1. bash
-
 
 ## testing `stow`
 
@@ -27,9 +26,9 @@ stow -nSv vim
 
 ## install
 
-Run the `start.sh` script:
+Run the `setup.sh` script:
 ```sh
-curl -sO https://raw.githubusercontent.com/heatxsink/.dotfiles/main/start.sh
+curl -sO https://raw.githubusercontent.com/heatxsink/.dotfiles/main/setup.sh
 ```
 
 ## license

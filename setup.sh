@@ -39,13 +39,14 @@ info "changing CWD to $REPO_PATH"
 cd "$REPO_PATH" >/dev/null
 
 
-setup_dotfiles() {
+setup() {
 	local files=(
 		".gitconfig"
 		".vimrc"
+		".bash_aliases"
+		".bash_functions"
 		".bashrc"
 		".bash_profile"
-		".bash_aliases"
 		".profile"
 	)
 	
@@ -64,16 +65,28 @@ setup_dotfiles() {
 		rm -rf "${HOME:?}/$d" || true
 		mkdir -p "$HOME/$d"
 	done
-
-	local to_stow="$(find stow -maxdepth 1 -type d -mindepth 1 | awk -F "/" '{print $NF}' ORS=' ')"
-	info "Stowing: $to_stow"
-	stow -d stow --verbose 1 --target "$HOME" "$to_stow"
 }
 
 main() {
-	info "setup .dotfiles ..."
+	info "setting up .dotfiles"
+
 	wait_input
-	setup_dotfiles
+
+	setup
+
+	stow -d stow --verbose 1 --target "$HOME" bash byobu git vim
+
+	case "$(uname -sr)" in
+	Darwin*)
+		warn "macOS detected."
+		stow -d stow --verbose 1 --target "$HOME" bash.macos byobu.macos
+		;;
+	Linux*)
+		warn "Linux detected."
+		stow -d stow --verbose 1 --target "$HOME" bash.linux byobu.linux
+		;;
+	esac
+
 	success "done."
 
 	info "system needs to restart. restart?"
