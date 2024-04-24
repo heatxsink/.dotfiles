@@ -10,7 +10,7 @@ REPO_PATH="$HOME/.dotfiles"
 reset_color=$(tput sgr 0)
 
 wait_input() {
-	read -p -r "press [enter] to continue."
+	read -p "press [enter] to continue."
 }
 
 info() {
@@ -27,6 +27,10 @@ err() {
 
 warn() {
 	printf "%s[*] %s%s\n" "$(tput setaf 3)" "$1" "$reset_color"
+}
+
+cleanup() {
+	info "cleaning up."
 }
 
 info "~~~ .dotfiles ~~~"
@@ -88,18 +92,8 @@ main() {
 	esac
 
 	success "done."
-
-	info "system needs to restart. restart?"
-
-	select yn in "y" "n"; do
-		case $yn in
-		y)
-			sudo shutdown -r now
-			break
-			;;
-		n) exit ;;
-		esac
-	done
+	
+	success "kthxbai!"
 }
 
 trap cleanup SIGINT SIGTERM ERR EXIT
