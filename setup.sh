@@ -10,7 +10,7 @@ REPO_PATH="$HOME/.dotfiles"
 reset_color=$(tput sgr 0)
 
 wait_input() {
-	read -p -r "press [enter] to continue."
+	read -p "press [enter] to continue."
 }
 
 info() {
