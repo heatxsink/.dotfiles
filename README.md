@@ -28,7 +28,7 @@ stow -nSv vim
 
 Run the `setup.sh` script:
 ```sh
-curl -sO https://raw.githubusercontent.com/heatxsink/.dotfiles/main/setup.sh
+bash <(curl -s https://raw.githubusercontent.com/heatxsink/.dotfiles/main/setup.sh)
 ```
 
 ## license
