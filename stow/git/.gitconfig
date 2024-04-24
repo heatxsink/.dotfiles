@@ -1,0 +1,14 @@
+[user]
+	name = Nick Granado
+	email = ngranado@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.config/git/ignore
+
+[include]
+	path = ~/work/.gitconfig
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
