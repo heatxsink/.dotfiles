@@ -33,4 +33,4 @@ curl -sO https://raw.githubusercontent.com/heatxsink/.dotfiles/main/start.sh
 ```
 
 ## license
-Licensed under MIT, © Nick Granado 2024: https://nickgranado.com
+Licensed under MIT, ©2024 Nick Granado
