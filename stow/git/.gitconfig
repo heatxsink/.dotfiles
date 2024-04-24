@@ -6,7 +6,7 @@
 	excludesfile = ~/.config/git/ignore
 
 [include]
-	path = ~/work/.gitconfig
+	path = ~/.work/.gitconfig
 
 [color "branch"]
 	current = yellow reverse
