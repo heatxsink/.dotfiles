@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-REPO_URL=https://github.com/heatxsink/.dotfiles.git
+REPO_URL=git@github.com:heatxsink/.dotfiles.git
 REPO_PATH="$HOME/.dotfiles"
 
 reset_color=$(tput sgr 0)
