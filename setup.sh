@@ -36,12 +36,14 @@ cleanup() {
 info "~~~ .dotfiles ~~~"
 wait_input
 
-info "cloning .dotfiles repo from $REPO_URL into $REPO_PATH"
-git clone "$REPO_URL" "$REPO_PATH"
+if [ ! -d "$REPO_PATH" ]; then
+	info "cloning .dotfiles-private repo from $REPO_URL into $REPO_PATH"
+	git clone "$REPO_URL" "$REPO_PATH"
+fi
 
 info "changing CWD to $REPO_PATH"
 cd "$REPO_PATH" >/dev/null
-
+git pull
 
 setup() {
 	local files=(
@@ -83,11 +85,11 @@ main() {
 	case "$(uname -sr)" in
 	Darwin*)
 		warn "macOS detected."
-		stow -d stow --verbose 1 --target "$HOME" bash.macos byobu.macos
+		stow -d stow --verbose 1 --target "$HOME" bash.macos
 		;;
 	Linux*)
 		warn "Linux detected."
-		stow -d stow --verbose 1 --target "$HOME" bash.linux byobu.linux
+		stow -d stow --verbose 1 --target "$HOME" bash.linux
 		;;
 	esac
 
