@@ -1,8 +1,6 @@
 # .profile
 
-#export LSCOLORS=ExFxCxDxBxegedabagacad
 export LSCOLORS=ExFxBxDxCxegedabagacad
-
 
 #####################################
 # base export's
