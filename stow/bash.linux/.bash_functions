@@ -15,4 +15,3 @@ function speak() {
 	arg1=$1
 	echo "$arg1" | /usr/bin/espeak -s 160 -a 100 -g 4
 }
-
