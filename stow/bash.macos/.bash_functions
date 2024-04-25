@@ -6,3 +6,6 @@ function retryssh() {
             sleep 5
     done
 }
+
+export -f retryssh
+
