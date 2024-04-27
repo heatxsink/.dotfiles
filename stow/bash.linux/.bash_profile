@@ -33,8 +33,3 @@ fi
 if [ -d $HOME/.local/bin ] ; then
 	export PATH=$HOME/.local/bin:$PATH
 fi
-
-#####################################
-# byobu
-#####################################
-_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
