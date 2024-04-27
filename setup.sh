@@ -80,7 +80,7 @@ main() {
 
 	setup
 
-	stow -d stow --verbose 1 --target "$HOME" bash byobu git vim
+	stow -d stow --verbose 1 --target "$HOME" byobu git vim
 
 	case "$(uname -sr)" in
 	Darwin*)

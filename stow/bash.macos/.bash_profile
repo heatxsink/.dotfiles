@@ -24,10 +24,7 @@ export GOPATH=$HOME/go
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
-export PATH=$HOME/scripts:$PATH
+export PATH=$HOME/.scripts:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
-#####################################
-# byobu
-#####################################
-_byobu_sourced=1 . /opt/homebrew/Cellar/byobu/6.12/bin/byobu-launch 2>/dev/null || true
+_byobu_sourced=1 . /usr/local/Cellar/byobu/6.12/bin/byobu-launch 2>/dev/null || true
