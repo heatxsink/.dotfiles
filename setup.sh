@@ -59,6 +59,8 @@ setup() {
 	local folders=(
 		".config/byobu"
 		".config/git"
+		".config/skhd"
+		".config/yabai"
 	)
 
 	info "removing existing files ..."
@@ -78,21 +80,22 @@ main() {
 
 	wait_input
 
-	setup
-
-	stow -d stow --verbose 1 --target "$HOME" byobu git vim
-
 	case "$(uname -sr)" in
 	Darwin*)
-		warn "macOS detected."
-		stow -d stow --verbose 1 --target "$HOME" bash.macos
+		warn "Darwin detected."
+		. scripts/darwin.sh
+		macos_defaults
+		brew_install
+		stow -d stow --verbose 1 --target "$HOME" bash.macos yabai skhd
 		;;
 	Linux*)
 		warn "Linux detected."
-		stow -d stow --verbose 1 --target "$HOME" bash.linux
+		stow -d stow --verbose 1 --target "$HOME" bash.linux 
 		;;
 	esac
 
+	stow -d stow --verbose 1 --target "$HOME" byobu git vim
+	
 	success "done."
 	
 	success "kthxbai!"
