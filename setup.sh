@@ -61,6 +61,7 @@ setup() {
 		".config/git"
 		".config/skhd"
 		".config/yabai"
+		".config/alacritty"
 	)
 
 	info "removing existing files ..."
@@ -79,6 +80,7 @@ main() {
 	info "setting up .dotfiles"
 
 	wait_input
+	setup
 
 	case "$(uname -sr)" in
 	Darwin*)
