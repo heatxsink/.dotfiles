@@ -9,4 +9,3 @@ alias checkpath="echo $PATH | sed 's/:/\n/g' | sort | uniq -c"
 
 alias arm='env /usr/bin/arch -arm64 /bin/bash --login'
 alias intel='env /usr/bin/arch -x86_64 /bin/bash --login'
-

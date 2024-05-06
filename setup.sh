@@ -94,7 +94,7 @@ main() {
 		;;
 	esac
 
-	stow -d stow --verbose 1 --target "$HOME" byobu git vim
+	stow -d stow --verbose 1 --target "$HOME" byobu git vim alacritty
 	
 	success "done."
 	
