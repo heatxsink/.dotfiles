@@ -37,7 +37,7 @@ info "~~~ .dotfiles ~~~"
 wait_input
 
 if [ ! -d "$REPO_PATH" ]; then
-	info "cloning .dotfiles-private repo from $REPO_URL into $REPO_PATH"
+	info "cloning .dotfiles repo from $REPO_URL into $REPO_PATH"
 	git clone "$REPO_URL" "$REPO_PATH"
 fi
 
